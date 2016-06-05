@@ -154,8 +154,8 @@ void setup() {
   printArray(Serial.list());
 
   // Open the port you are using at the rate you want VERIFY !
-  myPort = new Serial(this, Serial.list()[1], 9600);
-  //myPort = new Serial(this, "/dev/cu.usbmodem1411", 9600);
+  //myPort = new Serial(this, Serial.list()[1], 9600);
+  myPort = new Serial(this, "/dev/cu.usbmodem1411", 9600);
 
   //stop by default
   servoL_current = servoL_stop;
