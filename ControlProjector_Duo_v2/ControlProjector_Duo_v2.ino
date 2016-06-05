@@ -48,19 +48,19 @@ void loop()
         }
         
         Serial.flush();
-        Serial.println(message);//debug
+        //Serial.println(message);//debug
 
         int separatorIndex = message.indexOf('_');
         int secondSeparatorIndex = message.indexOf('_', separatorIndex+1);
         
         //Data not correct
         if(separatorIndex == -1){
-          Serial.println("Wrong data format");
+          //Serial.println("Wrong data format");
           //Correct data format
 
           
         }if(separatorIndex != -1 && secondSeparatorIndex ==-1){
-          Serial.println("1 motor instruction");
+          //Serial.println("1 motor instruction");
           //Correct data format
           String firstValue = message.substring(0, separatorIndex);
           String secondValue = message.substring(separatorIndex+1);
@@ -77,7 +77,7 @@ void loop()
             }
           }
         }if(separatorIndex != -1 && secondSeparatorIndex !=-1){
-          Serial.println("2 motor instruction");
+          //Serial.println("2 motor instruction");
           //Correct data format
           String firstValue = message.substring(0, separatorIndex);
           String secondValue = message.substring(separatorIndex+1);
