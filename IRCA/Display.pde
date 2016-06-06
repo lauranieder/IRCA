@@ -3,13 +3,13 @@ class Display {
   int nbrSec = 540000;
   int nbrMin = 10000;
   int nbrMax = 10000;
-  float div = 600;
+  float div = 600*2;
   PVector pos = new PVector();
   Display prev, other;
   float size;
   float timer = 0;
   float sizeCurrent, sizePrev, sizeMin, sizeAnime;
-  float viewMin = 100;
+  float viewMin = 100*2;
   boolean needRewind = false;
   boolean turnedOn = false;
   int id;

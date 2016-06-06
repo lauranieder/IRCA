@@ -126,21 +126,21 @@ void keyPressed() {
 //
 void setup() {
   //fullScreen();
-  size(1920, 1280);
+  size(1600, 1280);
   noSmooth();
   rectMode(CENTER);
   frameRate(25);
   //textSize(40);
   //font = loadFont("Monaco-48.vlw");
   font = loadFont("SourceCodePro-Regular-14.vlw");
-  textFont(font, 14);
+  textFont(font, 30);
   //
   thePi = loadStrings(nbrDecimalOfPi+".txt");
   splitPi = thePi[0].split("");
   //
-  projoL = new Projo(-300, 0, 1);
-  projoR = new Projo(300, 0, 2);
-  display = new Display(0, -100, 0);
+  projoL = new Projo(-600, 0, 1);
+  projoR = new Projo(600, 0, 2);
+  display = new Display(0, -200, 0);
   projoL.setPrev(display);
   projoR.setPrev(display);
   projoL.setOther(projoR);
@@ -235,11 +235,11 @@ void draw() {
   //
   if (viewActivity) {
     textAlign(LEFT, TOP);
-    text("rewind: "+rewind+"\nisRunning: "+isRunning+"\nmanualMode: "+manualMode, 0, 20);
+    text("rewind: "+rewind+"\nisRunning: "+isRunning+"\nmanualMode: "+manualMode, 0, 40);
   }
   //
   textAlign(CENTER, TOP);
-  text("π decimals from π["+cursorMin+"] to π["+cursorMax+"]\n"+piView, round(width/2), 20);
+  text("π decimals from π["+cursorMin+"] to π["+cursorMax+"]\n"+piView, round(width/2), 40);
   fill(cMag);
   text("\n\n"+piViewSub, round(width/2), 20);
   fill(255);
