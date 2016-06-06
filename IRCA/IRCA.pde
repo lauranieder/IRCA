@@ -126,7 +126,7 @@ void keyPressed() {
 //
 void setup() {
   //fullScreen();
-  size(800, 600);
+  size(1920, 1280);
   noSmooth();
   rectMode(CENTER);
   frameRate(25);
