@@ -25,7 +25,7 @@ class Projo extends Display  {
     }
     pushMatrix();
     translate(pos.x, pos.y);
-    size = 50+viewMin*2;
+    size = 50+viewMin*1.6;
     rect(0, 0, size, size);
     popMatrix();
     line(pos.x, pos.y, prev.pos.x, prev.pos.y);
@@ -37,7 +37,7 @@ class Projo extends Display  {
     pushMatrix();
     translate(pos.x, pos.y);
     fill(0);
-    ellipse(0, 0, sizeMin*2, sizeMin*2);
+    ellipse(0, 0, sizeMin*1.6, sizeMin*1.6);
     fill(255);
     text("π["+decimal+"]:\n"+wait/1000+"\n\n"+nbrSec/1000+"s", 0, 0);
     fill(cMag);

@@ -133,14 +133,15 @@ void setup() {
   //textSize(40);
   //font = loadFont("Monaco-48.vlw");
   font = loadFont("SourceCodePro-Regular-14.vlw");
-  textFont(font, 30);
+  textFont(font, 25);
   //
   thePi = loadStrings(nbrDecimalOfPi+".txt");
   splitPi = thePi[0].split("");
   //
-  projoL = new Projo(-600, 0, 1);
-  projoR = new Projo(600, 0, 2);
-  display = new Display(0, -200, 0);
+ 
+  projoL = new Projo(-600, 100, 1);
+  projoR = new Projo(600, 100, 2);
+  display = new Display(0, -160, 0);
   projoL.setPrev(display);
   projoR.setPrev(display);
   projoL.setOther(projoR);
@@ -269,7 +270,7 @@ void draw() {
   //
   fill(255);
   textAlign(CENTER, BOTTOM);
-  text("A project by Sophie Dascal & Fragment.in", width/2, height-20);
+  text("A project by Sophie Dascal & Fragment.in", width/2, height-40);
   textAlign(CENTER, CENTER);
   //
   translate(width/2, height/2);
@@ -321,7 +322,7 @@ void draw() {
     fill(255);
     d.drawText();
   }
-  text("IRCA\n\nInfinite Rewind\nCinematographic Apparatus\n\n"+(millis()/1000)+"s elapsed from launch", 0, 200);
+  text("IRCA\n\nInfinite Rewind\nCinematographic Apparatus\n\n"+(millis()/1000)+"s elapsed from launch", 0, 340);
   //
   //text(frameRate+"FR" ,50, 50);
 }
