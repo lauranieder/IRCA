@@ -173,8 +173,8 @@ public void setup() {
   printArray(Serial.list());
 
   // Open the port you are using at the rate you want VERIFY !
-  //myPort = new Serial(this, Serial.list()[1], 9600);
-  myPort = new Serial(this, "/dev/cu.usbmodem1411", 9600);
+  myPort = new Serial(this, Serial.list()[2], 9600);
+  //myPort = new Serial(this, "/dev/cu.usbmodem1411", 9600);
 
   //stop by default
   servoL_current = servoL_stop;
@@ -260,7 +260,7 @@ public void draw() {
   textAlign(CENTER, TOP);
   text("\u03c0 decimals from \u03c0["+cursorMin+"] to \u03c0["+cursorMax+"]\n"+piView, round(width/2), 40);
   fill(cMag);
-  text("\n\n"+piViewSub, round(width/2), 20);
+  text("\n\n"+piViewSub, round(width/2), 40);
   fill(255);
   stroke(cMag);
   line(perc*width, 0, perc*width, height);
